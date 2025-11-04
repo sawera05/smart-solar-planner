@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Solar Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔆 Smart Solar Planner</h1>
+        <p>Estimate your solar panel needs and total cost easily!</p>
+
+        <form action="/calculate" method="POST">
+            <label for="area">Available Roof Area (m²):</label><br>
+            <input type="number" id="area" name="area" placeholder="Enter roof area" required><br><br>
+
+            <label for="energy">Daily Energy Need (kWh):</label><br>
+            <input type="number" id="energy" name="energy" placeholder="Enter daily energy use" required><br><br>
+
+            <label for="sunlight">Average Sunlight Hours per Day:</label><br>
+            <input type="number" id="sunlight" name="sunlight" placeholder="Enter sunlight hours" required><br><br>
+
+            <label for="panel_cost">Cost per Solar Panel (Rs):</label><br>
+            <input type="number" id="panel_cost" name="panel_cost" value="25000" required><br><br>
+
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
+

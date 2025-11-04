@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solar Planner Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌞 Solar Installation Summary</h1>
+        <p><b>Panels Needed:</b> {{ panels }}</p>
+        <p><b>Total Cost:</b> Rs. {{ cost }}</p>
+        <p><b>Roof Area Required:</b> {{ area_needed }} m²</p>
+        <p><b>Suggestion:</b> {{ suggestion }}</p>
+        <a href="/">🔙 Back</a>
+    </div>
+</body>
+</html>
